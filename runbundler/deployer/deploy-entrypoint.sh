@@ -1,5 +1,6 @@
 #!/bin/sh -e
-
+echo "wait 3s ...."
+sleep 3
 test -n "$VERBOSE" && set -x
 
 dir=`dirname $0` 

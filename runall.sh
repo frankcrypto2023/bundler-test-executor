@@ -73,6 +73,7 @@ if $root/runbundler/runbundler.sh $bundler pull-start; then
 	-o junit_logging=all -o junit_log_passing_tests=false
   $PYTEST_FOLDER
   "
+  echo $PYTEST_FOLDER
   # --log-rpc
   pdm run test -o junit_suite_name="$name" $OPTIONS "$@" | tee -a $outraw
   test -r $outxml && xq . $outxml > $outjson

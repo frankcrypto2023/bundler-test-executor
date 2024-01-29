@@ -1,10 +1,10 @@
 FROM node:18 as aa06
-RUN git clone http://github.com/eth-infinitism/account-abstraction.git -b v0.6.0
+RUN git clone http://hub.fgit.cf/eth-infinitism/account-abstraction.git -b v0.6.0
 WORKDIR account-abstraction
 ENV TS_NODE_TRANSPILE_ONLY=1
 ENV PATH=$PATH:./node_modules/.bin
 RUN yarn global add node-gyp
-RUN yarn && hardhat compile
+RUN yarn config set registry 'https://registry.npmmirror.com' && yarn && hardhat compile
 
 FROM ghcr.io/foundry-rs/foundry:latest
 
