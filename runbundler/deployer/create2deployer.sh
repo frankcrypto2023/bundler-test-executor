@@ -32,7 +32,9 @@ fi
 if [ `cast cs $deployerAddress` == 0 ]; then
 
   cast send $CAST_FROM $factoryDeployer --value $deploymentPrice > /dev/null
+  sleep 3
   cast publish --async $deployerDeploymentTransaction > /dev/null
+  sleep 3
 fi
 
 salt=${2:-0}
@@ -42,3 +44,4 @@ echo deploying:
 #cast call $deployerAddress $ctr
 cast send $CAST_FROM $deployerAddress $ctr > /dev/null
 
+sleep 3

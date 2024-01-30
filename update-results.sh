@@ -1,8 +1,7 @@
-#!/bin/bash -xe
+#!/bin/bash
 
 resultrepo=https://github.com/eth-infinitism/bundler-test-results.git
 root=`cd \`dirname $0\`;pwd`
-
 if [[ -z "$1" || -d "$1" ]] ; then
   echo usage: $0 {out-results-clone-folder} [branch]
   echo "out folder is created."

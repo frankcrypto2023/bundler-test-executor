@@ -1,5 +1,6 @@
 #!/bin/sh -e
-
+echo "wait 5s .... funding"
+sleep 5
 test -n "$VERBOSE" && set -x
 
 #fund all addresses in the FUND array
