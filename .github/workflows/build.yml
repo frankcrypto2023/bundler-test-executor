@@ -85,7 +85,7 @@ jobs:
         #for faster "update-deps" for spec
       - run: yarn --cwd bundler-spec-tests/spec remove gatsby || echo "already removed"
 
-      - run: "cd bundler-spec-tests && pdm install && pdm update-deps"
+      - run: "cd bundler-spec-tests && pdm install && cd @account-abstraction && yarn && yarn compile &&  cd ../spec && yarn && yarn build"
         name: update submodules of bundler-spec-tests
 
       - run: VERBOSE=${{ inputs.verbose }} ./runall.sh ${{ inputs.runall_params }} 
