@@ -108,10 +108,10 @@ jobs:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
           source-directory: 'out-results'
-          destination-github-username: 'eth-infinitism'
+          destination-github-username: 'Qitmeer'
           destination-repository-name: 'bundler-test-results'
-          user-email: dror.tirosh@gmail.com
-          target-branch: ${{ github.ref_name }}
+          user-email: cp6svaen@hotmail.com
+          target-branch: ${{ github.ref_name }} 
 
 # Allow one concurrent deployment
 concurrency:
