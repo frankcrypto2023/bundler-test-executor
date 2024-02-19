@@ -2,9 +2,7 @@
 
 This repo runs the `bundler-spec-test` against a list of bundlers, and show the results.
 
-The result page is in: https://www.erc4337.io/bundlers
-
-Or https://bundler-test-results.eip4337.com/
+The result page is in: https://qitmeer.github.io/bundler-test-results/
 
 Each bundler to run has a folder and yml file [./bundlers](./bundlers) folder
 
