@@ -18,7 +18,6 @@ on:
         type: choice
         required: false
         options: 
-          - 
           - true
 
       skip_test:
@@ -105,8 +104,9 @@ jobs:
       - name: npm
         run: sudo apt -y install nodejs
 
-      - name: Deploy UI
-        run: git clone https://github.com/eth-infinitism/landing-page && cd landing-page && npm install && npm run build && cp -rf .next out-results/
+      - name: Compile UI
+        run: git clone https://github.com/frankcrypto2023/landing-page && cd landing-page && npm install && npm run build && && mv out-results/index.html out-results/index-old.html && cp -rf out out-results/
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
