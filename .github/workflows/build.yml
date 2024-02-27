@@ -105,7 +105,7 @@ jobs:
         run: sudo apt -y install nodejs
 
       - name: Compile UI
-        run: git clone https://github.com/Qitmeer/landing-page && cd landing-page && npm install && npm run build && mv ../out-results/index.html ../out-results/index-old.html && cp -rf out/* ../out-results/
+        run: cd landing-page && npm install && npm run build && mv ../out-results/index.html ../out-results/index-old.html && cp -rf out/* ../out-results/
 
 
       - name: Deploy
