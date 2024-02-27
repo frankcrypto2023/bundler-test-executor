@@ -18,7 +18,6 @@ on:
         type: choice
         required: false
         options: 
-          - 
           - true
 
       skip_test:
@@ -101,6 +100,13 @@ jobs:
 
       - name: Clone and update results repo
         run: ./update-results.sh out-results
+
+      - name: npm
+        run: sudo apt -y install nodejs
+
+      - name: Compile UI
+        run: cd landing-page && npm install && npm run build && mv ../out-results/index.html ../out-results/index-old.html && cp -rf out/* ../out-results/
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
