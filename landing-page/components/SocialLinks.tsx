@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaTwitter, FaTelegramPlane, FaDiscord, FaStackExchange } from 'react-icons/fa';
 import Image from 'next/image'
-import mirrorImage from '@assets/icons/mirror.png'
+// import mirrorImage from '@assets/icons/mirror.png'
 
 
 
@@ -33,7 +33,7 @@ const SocialLinks = () => {
           className="flex items-center space-x-2 text-blue-500 hover:text-blue-600"
         >
         <div style={{ height: '2.5em', width: '2.5em' }}>
-        <Image src={mirrorImage} alt="Mirror.xyz" />
+        <Image src='' alt="Mirror.xyz" />
         </div>
           <span>Official mirror.xyz</span>
         </a>        

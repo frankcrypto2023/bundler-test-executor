@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import logo from '@assets/4337-logo/ERC-4337-team-logo-color.svg';
-import menu_icon from '@assets/icons/menu.svg';
+// import logo from '@assets/4337-logo/ERC-4337-team-logo-color.svg';
+// import menu_icon from '@assets/icons/menu.svg';
 import { INavigationItem, NavigationItems } from '@configs/home/navigation';
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
@@ -19,7 +19,7 @@ export default function NavBar() {
   return (
     <div className="flex w-full text-xs z-50 flex-row h-[102px] items-center justify-between  horizon-layout">
       <Link href="/" className="self-center">
-        <Image src={logo} width={120} height={40} alt="logo" />
+        <Image src='' width={120} height={40} alt="logo" />
       </Link>
 
       <div className="hidden lg:flex flex-row gap-[59px]  text-black self-center">
@@ -30,7 +30,7 @@ export default function NavBar() {
 
       <Menu as="div" className="relative inline-block lg:hidden">
         <Menu.Button className="inline-flex w-full justify-center rounded-md">
-          <Image src={menu_icon} alt="" className="w-5 h-5 lg:hidden" />
+          <Image src='' alt="" className="w-5 h-5 lg:hidden" />
         </Menu.Button>
         <Transition
           as={Fragment}
