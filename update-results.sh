@@ -1,6 +1,6 @@
 #!/bin/bash
 
-resultrepo=https://github.com/Qitmeer/bundler-test-results.git
+resultrepo=https://github.com/Qitmeer/bundler-test-executor.git
 root=`cd \`dirname $0\`;pwd`
 if [[ -z "$1" || -d "$1" ]] ; then
   echo usage: $0 {out-results-clone-folder} [branch]
