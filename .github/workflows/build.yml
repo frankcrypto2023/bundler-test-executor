@@ -32,8 +32,8 @@ on:
 #  push: 
 #    branches:
 #      - '*'
-  pull_request:
-    types: [opened, reopened, synchronize]
+#  pull_request:
+#    types: [opened, reopened, synchronize]
 
   # Allows external webhook trigger
   repository_dispatch:
