@@ -1,4 +1,4 @@
-name: Build Test Results Dashboard
+name: Build Website Pages
 
 on: 
   push: 
@@ -22,8 +22,15 @@ jobs:
 
     steps:
 
+      - uses: actions/checkout@v4
+        with:
+          show-progress: false
+          
       - name: Clone branch gh-pages Code
         run: git clone https://github.com/Qitmeer/bundler-test-executor -b gh-pages out-results
+
+      - name: npm
+        run: sudo apt -y install nodejs
 
       - name: Compile UI
         run: cd landing-page && npm install && npm run build && cp -rf out/* ../out-results/
