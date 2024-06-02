@@ -1,5 +1,6 @@
 20240202/
 20240228/
+20240602/
 all.txt
 index.txt
 latest/
